@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title> PACKMAN GAME</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+</head>
+<body style="background-color: blue;">
+        <audio   id="myAudio" loop="true" >
+                <source src="sound.ogg" type="audio/ogg" >
+                <source src="sound.mp3" type="audio/mpeg">
+              </audio>
+    <div  id="menu" >
+    <ul>
+    <li><img  src="logo.png" width="80px" height="40px "></li>
+    <li><a id ="pop1" onclick="welcome()">Welcome</a></li>
+    <li><a id ="pop2" onclick="login()">Login</a></li>
+    <li><a id ="pop3" onclick="register()" >Register</a></li>
+    <li><a id="myBtn" onclick= "about()">About Me</a></li>
+    <li ><a id ="pop4" onclick="logOff()">Logout</a></li>
+    <li><img  src="music.png" width="20px" height="20px" onclick="playAudio()"></li>
+    </ul>
+    </div> 
+    <div id="setting">
+    <div class="row">
+        <h1>Game Setting</h1>
+            <div style="text-align: center">
+                    <div class="column" >
+                        <div id ="saleem">
+                      choose which key to up:
+                      <br>
+                      <input type="text" name="up" id="up" style="font-size: 25px;" onkeypress="up();" >
+                      <br>
+                      <br>
+                      choose which key to down:
+                      <br>
+                      <input type="text" name="down" id="down" style="font-size: 25px"onkeypress="down();">
+                      <br>
+                      <br>
+                      choose which key to right:
+                      <br>
+                      <input type="text" name="right" id="right" style="font-size: 25px" onkeypress="right();">
+                      <br>
+                      <br>
+                      choose which key to left:
+                      <br>
+                      <input type="text" name="left" id="left" style="font-size: 25px" onkeypress="left();">
+                        <br>
+                        <br>
+                        <br>
+                        </div>
+                    </div>
+    </div>
+            <div class="column" >
+                    <div style="font-size: 25px ;text-align: center ">
+                            </div>
+                              <div style="text-align: center ;">
+                           <p style="font-size: 25px">selcet the color of 5 point</p> 
+                        <select id="point5"  style="font-size: 25px">
+                            <option value="random">random</option>
+                            <option value="red">red</option>
+                            <option value="orange">orange</option>
+                            <option value="green">green</option>
+                            <option value="white">white</option>
+                            <option value="black">black</option>
+                            <option value="fuchsia">fuchsia</option>
+                            <option value="grey">grey</option>
+                          </select>
+                          <p style="font-size: 25px">selcet the color of 10 point</p> 
+                          <select id="point10" style="font-size: 25px">
+                            <option value="random">random</option>
+                            <option value="red">red</option>
+                            <option value="orange">orange</option>
+                            <option value="green">green</option>
+                            <option value="white">white</option>
+                            <option value="black">black</option>
+                            <option value="fuchsia">fuchsia</option>
+                            <option value="grey">grey</option>
+                          </select>
+                          <p style="font-size: 25px">selcet the color of 15 point</p> 
+                          <select id="point15"  style="font-size: 25px">
+                            <option value="random">random</option>
+                            <option value="red">red</option>
+                            <option value="orange">orange</option>
+                            <option value="green">green</option>
+                            <option value="white">white</option>
+                            <option value="black">black</option>
+                            <option value="fuchsia">fuchsia</option>
+                            <option value="grey">grey</option>
+                          </select>
+                        </div>
+            </div>     
+ <div style="text-align: center">
+        <div class="column" >
+            <div>
+                    <p >select how many  <img  src="monster.png" width="40px" height="40px" >  </p> 
+                    <select id="monster" style="font-size: 25px;">
+                        <option value="random">random</option>
+                        <option value="1">1 </option>
+                        <option value="2">2 </option>
+                        <option value="3 ">3</option>
+                      </select>
+                      <br>
+                      <br>
+          <p style="color: red ;display: inline;" >*</p> The Number Of The Ball (50-90):
+          <input type="text" name="NUMBEROFBALL" id="NUMBEROFBALL" style="font-size: 25px;"  >
+          <br>
+          <br>
+          <p style="color: red ;display: inline;" >*</p>Set Time (At Least 60 Sec):<br>
+          <input type="text" name="TIME" id="TIME" style="font-size: 25px">
+            <br>
+            <br>
+            <button onclick="next();" style="font-size: 25px;">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+          </div>
+        </div>
+
+    <div id="welcome">
+    <img  src="logo.png" width="250px" height="300px" class="center" > 
+    <br>
+    <button class="button" onclick="login()" >Login</button>
+    <button class="button" onclick="register()" >Register</button>
+    </div>
+
+    <div id="login">
+             <h2>Login</h2>
+              User Name:<br>
+              <input type="text" name="USERNAME" id="USERNAME" >
+              <br>
+              Password:<br>
+              <input type="password" name="PASSWORD" id="PASSWORD">
+              <br><br>
+              <button onclick="checkUser()">
+                  Submit
+              </button>
+              
+  </div>
+    </div>
+
+    <div id="result">
+      <button class="button" onclick="setting()">Restart</button>
+    </div>
+
+    <div id="register">
+            <h2>Register</h2>
+            User Name:<br>
+            <input name="text" id="name" name="name" type="text" placeholder="Please Enter User Name" class="contact-input">
+            <br>
+            Password:<br>
+            <input type="password" name="password" id="password" placeholder="Please Enter Password" class="contact-input">
+            <br>
+            Re-Password:<br>
+            <input type="password" name="password2" id="password2" placeholder="Please Enter Password" class="contact-input">
+            <br>
+            First Name:<br>
+            <input type="text" name="fname" id="fname" placeholder="Please Enter First Name" class="contact-input">
+            <br>
+            Last Name:<br>
+            <input type="text" name="lname" id="lname" placeholder="Please Enter Last Name" class="contact-input">
+            <br>
+            Email:<br>
+            <input name="email" id="email" type="text" placeholder="Please Enter Email" class="contact-input">
+            <br>
+            <br>
+            <input id="date" type="date" value="2000-01-01">
+            <br>
+            <input type="submit" class="contactform-buttons" id="submit"value="submit" />
+    </div>
+    
+    <div id ="about">
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                 <span class="close">&times;</span>
+                 <h1>About</h1>
+                <p>Saleem Ghantous : 205922917 | Ibrahim Sarsour : 313370439
+                </p>
+                <h3> The use in jQuery Plugin:</h3>
+                <p>
+                  We used Jquery when we checked the validations of the details that were inputed in the system registration by the user(name /password/email). 
+                 <br>
+                  In addition to that, we used "block"/"none" elements (which all belong to JQuery) in order to make some pages (Div's) hidden and some pages visible, in order for the user to go to one page to another when clicking on a certain button.
+                </p>
+                <h3> The use of a Template:</h3>
+                <p>
+                  yes , we used Template when we get and save value from the input .
+                               </p>
+                </div>
+                </div>
+            </div>
+              <div id="footer">
+              <p  > PackMan Game Devoloped By: Ibrahim Sarsour (Sarsouri@post.bgu.ac.il) | Saleem Ghantous (Saleem@post.bgu.ac.il) </p>
+    </div>
+    <div id="initial" style="color: red"> 
+      <div id="row">
+        <div id="column">
+    <br>
+    SCORE:
+    <input id="lblScore" type="text"/>
+    <br/>
+    TIME:  
+    <input id="lblTime" type="text"/>
+    <br/>
+    <img  src="h.jpeg" width="40px" height="40px ">
+        <p id="demo" style="display: inline-block; font-size: 40px"> </p>
+    <br/>
+  </div>
+  <div id="column">
+    <canvas id="canvas" height="600" width="600" style="text-align: center"></canvas>
+    <script  type="text/javascript" src="pacman.js" ></script>
+    </div>
+  </div>
+</div>
+</body>
+</html>

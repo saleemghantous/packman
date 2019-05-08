@@ -1,0 +1,192 @@
+#menu{
+    width: 100%;
+    font-size: 20px;
+    padding-top: 0%;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+li{
+    display: inline-block;
+    padding-right: 7%;
+}
+
+a:hover{
+color: red;
+}
+
+#welcome{
+    background-color: blue;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .button {
+    background-color: fuchsia; 
+    padding-top: 25px ;
+    padding-left: 25px;
+    padding-right: 25px ;
+    padding-bottom: 25px;
+    border-radius: 30px;
+    margin-left: 25%;
+    margin-right: auto;
+    width: 50%;
+    color: yellow;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.button:hover{
+    background-color:green;
+    text-shadow:5px 5px 5px navy;
+}
+
+#login{
+    text-align: center;
+    padding-top: 25px ;
+    padding-left: 25px;
+    padding-right: 25px ;
+    padding-bottom: 25px;
+    font-size: 30px;
+}
+
+#register{
+    text-align: center;
+    padding-top: 25px ;
+    padding-left: 25px;
+    padding-right: 25px ;
+    padding-bottom: 25px;
+    font-size: 22px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .multiselect {
+    width: 200px;
+  }
+  
+  .selectBox {
+    position: relative;
+  }
+  
+  .selectBox select {
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  #checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+  }
+  
+  #checkboxes label {
+    display: block;
+  }
+  
+  #checkboxes label:hover {
+    background-color: #1e90ff;
+  }
+  
+  #setting{
+    padding-top: 45px;
+    text-align: center;
+    display: inline-block;
+    font-size: 30 px; 
+    size: 30px;
+  }
+
+  .selectBox{
+    font-size: 6;
+  }
+
+  .column {
+    float: left;
+    width: 33.32%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+
+  #column {
+    float: left;
+    width: 33.32%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+
+#row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#saleem{
+  font-size: 25px;
+  
+}
